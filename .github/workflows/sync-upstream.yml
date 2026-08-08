@@ -1,0 +1,18 @@
+name: Sync fork with upstream
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # every day at 3 AM UTC — change as you like
+  workflow_dispatch:        # lets you trigger it manually from the Actions tab too
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync fork with upstream
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh repo sync sripati/PPMCAD16B -b main
