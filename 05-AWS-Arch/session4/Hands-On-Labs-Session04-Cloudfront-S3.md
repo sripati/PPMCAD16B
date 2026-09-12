@@ -82,183 +82,208 @@ my-website
 ### index.html
 
 ```html
-!DOCTYPE html
-html lang=en
-head
-    meta charset=UTF-8
-    meta name=viewport content=width=device-width, initial-scale=1.0
-    titleMy Static Website - Hometitle
-    link rel=stylesheet href=cssstyle.css
-head
-body
-    header
-        h1Welcome to My Static Websiteh1
-        nav
-            a href=index.htmlHomea
-            a href=about.htmlAbouta
-        nav
-    header
-    main
-        h2CloudFront + S3 Demoh2
-        pThis website is hosted on Amazon S3 and delivered via CloudFront CDN.p
-        pCurrent time span id=timespanp
-        img src=imageslogo.png alt=Logo style=max-width 200px;
-    main
-    footer
-        p&copy; 2025 My Static Websitep
-    footer
-    script src=jsapp.jsscript
-body
-html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Static Website - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to My Static Website</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>CloudFront + S3 Demo</h2>
+
+        <p>
+            This website is hosted on Amazon S3 and delivered via CloudFront CDN.
+        </p>
+
+        <p>
+            Current time: <span id="time"></span>
+        </p>
+
+        <img src="images/logo.png"
+             alt="Logo"
+             style="max-width: 200px;">
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Static Website</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
 ```
 
 ### about.html
 
 ```html
-!DOCTYPE html
-html lang=en
-head
-    meta charset=UTF-8
-    meta name=viewport content=width=device-width, initial-scale=1.0
-    titleAbout - My Static Websitetitle
-    link rel=stylesheet href=cssstyle.css
-head
-body
-    header
-        h1About This Projecth1
-        nav
-            a href=index.htmlHomea
-            a href=about.htmlAbouta
-        nav
-    header
-    main
-        h2Technology Stackh2
-        ul
-            liAmazon S3 - Object storage for static filesli
-            liAmazon CloudFront - Global CDN for fast deliveryli
-            liOrigin Access Control - Secure S3 accessli
-        ul
-        pa href=index.htmlBack to Homeap
-    main
-    footer
-        p&copy; 2025 My Static Websitep
-    footer
-body
-html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - My Static Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>About This Project</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Technology Stack</h2>
+
+        <ul>
+            <li>Amazon S3 - Object storage for static files</li>
+            <li>Amazon CloudFront - Global CDN for fast delivery</li>
+            <li>Origin Access Control - Secure S3 access</li>
+        </ul>
+
+        <p><a href="index.html">Back to Home</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Static Website</p>
+    </footer>
+</body>
+</html>
 ```
 
 ### error.html
 
 ```html
-!DOCTYPE html
-html lang=en
-head
-    meta charset=UTF-8
-    meta name=viewport content=width=device-width, initial-scale=1.0
-    title404 - Page Not Foundtitle
-    link rel=stylesheet href=cssstyle.css
-head
-body
-    header
-        h1404 - Page Not Foundh1
-    header
-    main
-        pSorry, the page you're looking for doesn't exist.p
-        pa href=index.htmlReturn to Homeap
-    main
-    footer
-        p&copy; 2025 My Static Websitep
-    footer
-body
-html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>404 - Page Not Found</h1>
+    </header>
+
+    <main>
+        <p>Sorry, the page you're looking for doesn't exist.</p>
+        <p><a href="index.html">Return to Home</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Static Website</p>
+    </footer>
+</body>
+</html>
 ```
 
 ### cssstyle.css
 
 ```css
- {
-    margin 0;
-    padding 0;
-    box-sizing border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height 1.6;
-    color #333;
-    background-color #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
 header {
-    background linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color white;
-    padding 2rem;
-    text-align center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    text-align: center;
 }
 
 nav {
-    margin-top 1rem;
+    margin-top: 1rem;
 }
 
 nav a {
-    color white;
-    text-decoration none;
-    margin 0 1rem;
-    padding 0.5rem 1rem;
-    background rgba(255, 255, 255, 0.2);
-    border-radius 5px;
-    transition background 0.3s;
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-nav ahover {
-    background rgba(255, 255, 255, 0.3);
+nav a:hover {
+    background: rgba(255, 255, 255, 0.3);
 }
 
 main {
-    max-width 800px;
-    margin 2rem auto;
-    padding 2rem;
-    background white;
-    border-radius 8px;
-    box-shadow 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    color #667eea;
-    margin-bottom 1rem;
+    color: #667eea;
+    margin-bottom: 1rem;
 }
 
 footer {
-    text-align center;
-    padding 1rem;
-    color #666;
-    margin-top 2rem;
+    text-align: center;
+    padding: 1rem;
+    color: #666;
+    margin-top: 2rem;
 }
 
 ul {
-    margin-left 2rem;
-    margin-top 1rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
 }
 
 li {
-    margin 0.5rem 0;
+    margin: 0.5rem 0;
 }
 ```
 
 ### jsapp.js
 
 ```javascript
- Simple script to display current time
+// Simple script to display current time
 function updateTime() {
     const timeElement = document.getElementById('time');
+
     if (timeElement) {
         const now = new Date();
         timeElement.textContent = now.toLocaleTimeString();
     }
 }
 
- Update time every second
+// Update time every second
 setInterval(updateTime, 1000);
+
 updateTime();
 
 console.log('Website loaded successfully via CloudFront!');
@@ -364,23 +389,23 @@ Console S3 - Buckets - 'my-static-website-demo-2025' - Permissions - Bucket poli
 
 ```json
 {
-    Version 2012-10-17,
-    Statement [
-        {
-            Sid AllowCloudFrontServicePrincipal,
-            Effect Allow,
-            Principal {
-                Service cloudfront.amazonaws.com
-            },
-            Action s3GetObject,
-            Resource arnawss3my-static-website-demo-2025,
-            Condition {
-                StringEquals {
-                    AWSSourceArn arnawscloudfrontYOUR-ACCOUNT-IDdistributionYOUR-DISTRIBUTION-ID
-                }
-            }
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowCloudFrontServicePrincipal",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "cloudfront.amazonaws.com"
+      },
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::my-static-website-demo-2025/*",
+      "Condition": {
+        "StringEquals": {
+          "AWS:SourceArn": "arn:aws:cloudfront::YOUR-ACCOUNT-ID:distribution/YOUR-DISTRIBUTION-ID"
         }
-    ]
+      }
+    }
+  ]
 }
 ```
 
